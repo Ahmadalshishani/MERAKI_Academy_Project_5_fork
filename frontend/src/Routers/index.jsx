@@ -5,7 +5,7 @@ import About from "../pages/About"
 import Cart from "../pages/Cart"
 import Category from "../pages/Category"
 import Register from "../components/Register"
-
+import Login from "../components/Login"
 export const router = createBrowserRouter([
 {
     path:"/" ,
@@ -13,7 +13,10 @@ export const router = createBrowserRouter([
     children:[
         {
             path:"",
-            element:<Home/>
+            element:<Home/>,
+            children:[
+               
+            ]
         },
         {
             path:"about",
@@ -32,6 +35,10 @@ export const router = createBrowserRouter([
             path:"register",
             element:<Register/>
 
+        },
+        {
+            path:"login",
+            element:<Login/>
         }
     ]
 
